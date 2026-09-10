@@ -1,6 +1,6 @@
-# 🛰️ SatQuery AI
+# 🛰️ AERIS
 
-**SatQuery AI** is an agentic Vision-Language Assistant for remote sensing and satellite imagery analysis.
+**AERIS** is an agentic Vision-Language Assistant for remote sensing and satellite imagery analysis.
 
 Upload satellite imagery and ask questions in natural language. The system validates the imagery, detects modality, routes the query to an appropriate analysis workflow, executes the required model pipeline, and returns an interpretable result.
 
