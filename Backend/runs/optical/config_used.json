@@ -1,0 +1,76 @@
+{
+  "seed": 42,
+  "device": "auto",
+  "model": {
+    "in_channels": 3,
+    "encoder_widths": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "encoder_blocks": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "out_strides": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "decoder_channels": 256,
+    "temporal_mode": "difference"
+  },
+  "dataset": {
+    "type": "levir",
+    "root": "D:\\AERIS-new\\Backend\\dataset\\LEVIR CD",
+    "val_split": "val",
+    "in_channels": 3,
+    "mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "augment": {
+      "scale_min": 0.75,
+      "crop_size": 128,
+      "hflip_p": 0.5,
+      "vflip_p": 0.5,
+      "rotate90": true,
+      "brightness_contrast_p": 0.3
+    }
+  },
+  "training": {
+    "epochs": 2,
+    "batch_size": 1,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "scheduler": "cosine",
+    "amp": true,
+    "grad_clip": 1.0,
+    "early_stopping_patience": 15,
+    "num_workers": 0
+  },
+  "loss": {
+    "type": "bce_dice",
+    "pos_weight": 5.0,
+    "bce_weight": 1.0,
+    "dice_weight": 1.0
+  },
+  "eval": {
+    "threshold": 0.5,
+    "select_metric": "f1",
+    "save_val_predictions": 8
+  },
+  "output": {
+    "dir": "runs/optical"
+  }
+}

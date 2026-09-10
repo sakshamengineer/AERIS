@@ -1,0 +1,209 @@
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+.python-version
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+
+# ============================================================
+# ENVIRONMENT & SECRETS
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.secret
+secrets.toml
+
+
+# ============================================================
+# JUPYTER
+# ============================================================
+
+.ipynb_checkpoints/
+
+
+# ============================================================
+# STREAMLIT
+# ============================================================
+
+.streamlit/secrets.toml
+
+
+# ============================================================
+# MACHINE LEARNING / HUGGING FACE
+# ============================================================
+
+# Hugging Face cache
+hf_cache/
+.huggingface/
+.cache/
+transformers_cache/
+
+# Model weights
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# ML experiment outputs
+wandb/
+mlruns/
+
+# Frontend dependencies
+/Frontend/node_modules/
+
+# Backend dependencies
+/Backend/node_modules/
+
+
+# ============================================================
+# DATA
+# ============================================================
+
+# Raw / downloaded datasets
+Backend/dataset/
+
+# Keep directory structure if needed
+!Backend/data/.gitkeep
+Backend/dataset/Opt-sar-model_dataset
+
+# ============================================================
+# GENERATED OUTPUTS
+# ============================================================
+
+Backend/outputs/
+
+# Keep output directory in repository
+!Backend/outputs/.gitkeep
+
+
+# ============================================================
+# TEMPORARY UPLOADS
+# ============================================================
+
+Backend/uploads/
+Backend/tmp/
+Backend/temp/
+*.tmp
+*.temp
+
+
+# ============================================================
+# LOGS
+# ============================================================
+
+*.log
+logs/
+
+
+# ============================================================
+# PYTHON DEVELOPMENT
+# ============================================================
+
+.vscode/
+.idea/
+
+# Local configuration
+*.local
+
+
+# ============================================================
+# NODE / FRONTEND
+# ============================================================
+
+Frontend/node_modules/
+Frontend/dist/
+Frontend/build/
+Frontend/.vite/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager caches
+.npm/
+.yarn/
+
+
+# ============================================================
+# FRONTEND ENVIRONMENT FILES
+# ============================================================
+
+Frontend/.env
+Frontend/.env.*
+!Frontend/.env.example
+
+
+# ============================================================
+# OS FILES
+# ============================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+
+# ============================================================
+# IDE
+# ============================================================
+
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Keep VS Code extension recommendations if you create them
+!.vscode/extensions.json
+
+
+# ============================================================
+# PYTHON / RASTER TEMP FILES
+# ============================================================
+
+*.tif.tmp
+*.tiff.tmp
+
+
+# ============================================================
+# CACHE / TEMP DIRECTORIES
+# ============================================================
+
+**/__pycache__/
+**/.cache/
+**/.pytest_cache/

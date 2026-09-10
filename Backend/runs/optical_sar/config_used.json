@@ -1,0 +1,91 @@
+{
+  "seed": 42,
+  "device": "auto",
+  "model": {
+    "optical_channels": 3,
+    "sar_channels": 2,
+    "encoder_widths": [
+      64,
+      128,
+      256
+    ],
+    "encoder_blocks": [
+      2,
+      2,
+      2
+    ],
+    "out_strides": [
+      8,
+      16,
+      32
+    ],
+    "decoder_channels": 256,
+    "temporal_mode": "difference",
+    "fusion_mode": "gated",
+    "fusion_heads": 4
+  },
+  "dataset": {
+    "type": "slag",
+    "root": "D:\\AERIS-new\\Backend\\dataset\\Opt-sar-model_dataset",
+    "val_split": "val",
+    "optical_channels": 3,
+    "sar_channels": 2,
+    "optical_mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "optical_std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "sar_mean": [
+      -13.0,
+      -20.0
+    ],
+    "sar_std": [
+      5.0,
+      6.0
+    ],
+    "sar_clip": [
+      -35.0,
+      5.0
+    ],
+    "sar_log_db": false,
+    "check_georef": true,
+    "augment": {
+      "scale_min": 0.75,
+      "crop_size": 256,
+      "hflip_p": 0.5,
+      "vflip_p": 0.5,
+      "rotate90": true,
+      "brightness_contrast_p": 0.3
+    }
+  },
+  "training": {
+    "epochs": 5,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "scheduler": "cosine",
+    "amp": true,
+    "grad_clip": 1.0,
+    "early_stopping_patience": 15,
+    "num_workers": 4
+  },
+  "loss": {
+    "type": "bce_dice",
+    "pos_weight": 5.0,
+    "bce_weight": 1.0,
+    "dice_weight": 1.0
+  },
+  "eval": {
+    "threshold": 0.5,
+    "select_metric": "f1",
+    "save_val_predictions": 8
+  },
+  "output": {
+    "dir": "runs/optical_sar"
+  }
+}
