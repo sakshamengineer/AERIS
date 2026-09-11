@@ -1,10 +1,52 @@
-torch>=2.1
-torchvision>=0.16
-numpy>=1.24
-pillow>=9.5
-pyyaml>=6.0
-tqdm>=4.65
-matplotlib>=3.7
-tifffile>=2023.7
-# Optional, only needed for GeoTIFF CRS/transform alignment checks:
-# rasterio>=1.3
+# ============================================================
+# AERIS Backend - Python Dependencies
+# Adaptive Earth-observation Reasoning & Intelligence System
+# ============================================================
+
+# ------------------------------------------------------------
+# API / Web Server
+# ------------------------------------------------------------
+fastapi
+uvicorn[standard]
+python-multipart
+
+# ------------------------------------------------------------
+# Streamlit UI
+# ------------------------------------------------------------
+streamlit
+
+# ------------------------------------------------------------
+# AI / ML
+# ------------------------------------------------------------
+transformers
+accelerate
+peft
+datasets
+huggingface_hub
+qwen-vl-utils
+
+
+opencv-python
+Pillow
+matplotlib
+
+# ------------------------------------------------------------
+# Remote Sensing / Geospatial
+# ------------------------------------------------------------
+rasterio
+geopandas
+shapely
+pyproj
+
+# ------------------------------------------------------------
+# Data Processing
+# ------------------------------------------------------------
+numpy
+pandas
+scikit-learn
+
+# ------------------------------------------------------------
+# HTTP / Environment / Utilities
+# ------------------------------------------------------------
+requests
+python-dotenv
